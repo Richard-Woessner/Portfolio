@@ -37,7 +37,7 @@ const Home = () => {
         />
         <Skills />
         <Projects projects={filteredProjects} />
-        <Contact />
+        {/* <Contact /> */}
       </main>
       <BackToTop />
     </>
