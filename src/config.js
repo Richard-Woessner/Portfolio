@@ -11,6 +11,11 @@ import HeroDark from "./images/hero-dark.jpg";
 // Projects Images (add your images to the images directory and import below)
 import Logo from "./images/logo.svg";
 
+// Import SVG images
+import MdiFire from "./images/mdi-fire.svg";
+import MdiCarOutline from "./images/mdi-car-outline.svg";
+import MaterialSymbolsLockOutline from "./images/material-symbols-lock-outline.svg";
+
 /* START HERE
  **************************************************************
   Add your GitHub username (string - "YourUsername") below.
@@ -112,13 +117,57 @@ export const resume = null;
  ************************************************************** 
   List the repo names (string - "your-repo-name") you want to include (they will be sorted alphabetically). If empty, only the first 3 will be included.
 */
-export const filteredProjects = ["example-1", "example-2", "example-3"];
+export const filteredProjects = [
+    {
+        id: 1,
+        name: "HVAC Data and Automation Software",
+        description: "Full Stack",
+        additionalInfo:
+            "Developed interactive dashboards using Azure-integrated queries and Kendo UI components to support faster data access and user analytics. Developed inventory and query modules that improved data accuracy and response times in customer inquiries by optimizing .NET and SQL data structuring.",
+        technologies: "Azure, React, Kendo UI, .NET 6, ElasticSearch",
+        image: MdiFire, // Use the imported SVG
+        html_url:
+            "https://github.com/YourUsername/HVAC-Data-and-Automation-Software",
+        homepage: "https://your-live-demo-url.com",
+    },
+    {
+        id: 2,
+        name: "Real Estate Lock Management Software",
+        description: "Full Stack",
+        additionalInfo:
+            "Created features for an internal web app, took data and turned it into a readable, mutable report. Features: Client-side table filtering, paging, and sorting, including a mobile-friendly UI.",
+        technologies: "Angular, Node, MySQL",
+        image: MaterialSymbolsLockOutline, // Use the imported SVG
+        html_url:
+            "https://github.com/YourUsername/Real-Estate-Lock-Management-Software",
+        homepage: "https://your-live-demo-url.com",
+    },
+    {
+        id: 3,
+        name: "Vehicle Assessment Software",
+        description: "Frontend",
+        additionalInfo:
+            "Created an interactive web component for vehicle assessment, allowing dealerships to input details and receive guided value estimates, enhancing user engagement and accuracy. Implemented UX-enhancing features with interactive GUI, reducing data entry errors.",
+        technologies: "Ajax, Bootstrap, .NET Razor",
+        image: MdiCarOutline, // Use the imported SVG
+        html_url: "https://github.com/YourUsername/Vehicle-Assessment-Software",
+        homepage: "https://your-live-demo-url.com",
+    },
+];
 
-// Replace the defualt GitHub image for matching repos below (images imported above - lines 7-8)
+// Replace the default GitHub image for matching repos below (images imported above - lines 7-8)
 export const projectCardImages = [
     {
-        name: "example-1",
-        image: Logo,
+        name: "HVAC Data and Automation Software",
+        image: MdiFire,
+    },
+    {
+        name: "Real Estate Lock Management Software",
+        image: MaterialSymbolsLockOutline,
+    },
+    {
+        name: "Vehicle Assessment Software",
+        image: MdiCarOutline,
     },
 ];
 

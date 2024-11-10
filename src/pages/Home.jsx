@@ -18,7 +18,9 @@ const Home = () => {
   const { data: userData } = useGetUsersQuery();
 
   React.useEffect(() => {
-    updateTitle(`${userData.name} | Portfolio`);
+    if (userData && userData.name) {
+      updateTitle(`${userData.name} | Portfolio`);
+    }
   }, [userData]);
 
   return (
@@ -31,7 +33,7 @@ const Home = () => {
           moreInfo={moreInfo}
         />
         <Skills />
-        <Projects filteredProjects={filteredProjects} />
+        <Projects projects={filteredProjects} />
         <Contact />
       </main>
       <BackToTop />
