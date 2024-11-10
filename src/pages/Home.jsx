@@ -1,3 +1,5 @@
+// src/pages/Home.jsx
+
 import React from "react";
 // State
 import { useGetUsersQuery } from "../app/apiSlice";
@@ -12,8 +14,9 @@ import BackToTop from "../components/BackToTop";
 import { filteredProjects, moreInfo } from "../config";
 // Utils
 import { updateTitle } from "../utils";
+// Import Container from React-Bootstrap
+import { Container } from "react-bootstrap";
 
-// #region component
 const Home = () => {
   const { data: userData } = useGetUsersQuery();
 
@@ -40,6 +43,5 @@ const Home = () => {
     </>
   );
 };
-// #endregion
 
 export default Home;

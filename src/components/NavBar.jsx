@@ -10,8 +10,9 @@ import { Link, useLocation } from "react-router-dom";
 import defaultLogo from "../images/defaultNavLogo.svg";
 // Components
 import { Link as ScrollLink } from "react-scroll";
-import { Container, Nav, Navbar } from "react-bootstrap";
+import { Container, Nav, Navbar, Button } from "react-bootstrap";
 import ThemeToggle from "./ThemeToggle";
+import { resume } from "../config";
 
 // #region constants
 const navLinks = {
@@ -142,6 +143,16 @@ const NavBar = ({ Logo = defaultLogo, callBack, closeDelay = 125 }) => {
                 setExpanded={setisExpanded}
                 setTheme={callBack}
               />
+            </Nav>
+            <Nav style={{ marginLeft: '1rem' }}>
+              <Button
+                variant="outline-primary"
+                href={resume}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Resume
+              </Button>
             </Nav>
           </Navbar.Collapse>
         </Container>
