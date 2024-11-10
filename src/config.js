@@ -31,6 +31,21 @@ export const navLogo = null;
 */
 export const Blog = null;
 
+// src/config.js
+
+// Add your social links below
+export const socialLinks = [
+    {
+        provider: "github",
+        url: `https://github.com/Richard-Woessner`,
+    },
+    {
+        provider: "linkedin",
+        url: "https://www.linkedin.com/in/richard-woessner/",
+    },
+    // Add more social links as needed
+];
+
 // Hero images (imported above - lines 8-9)
 export { HeroLight as Light };
 export { HeroDark as Dark };
